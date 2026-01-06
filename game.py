@@ -13,14 +13,14 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///games.db'
 db = flask_sqlalchemy.SQLAlchemy(app)
 
 class Game(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    code = db.Column(db.Integer, unique=True, nullable=False)
-    category = db.Column(db.String(80), nullable=False)
-    imposters: Mapped[list] = mapped_column(nullable=False)
-    word = db.Column(db.String(120), nullable=False)
-    players: Mapped[list] = mapped_column(nullable=False)
-    gameName = db.Column(db.String(120), nullable=True)
-    gameState = db.Column(db.String(20), nullable=False, default="waiting")
+    id: Mapped[int] = mapped_column(primary_key=True)
+    code: Mapped[int] = mapped_column(unique=True)
+    category: Mapped[str] = mapped_column(db.String(80))
+    imposters: Mapped[list] = mapped_column()
+    word: Mapped[str] = mapped_column(db.String(120))
+    players: Mapped[list] = mapped_column()
+    gameName: Mapped[str] = mapped_column(db.String(120), nullable=True)
+    gameState: Mapped[str] = mapped_column(db.String(20), default="waiting")
 
 def get_random_word(category):
     if category not in words:
