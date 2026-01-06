@@ -1,0 +1,16 @@
+{
+    "food": [
+        "apple",
+        "banana",
+        "orange",
+        "cake",
+        "mexican",
+        "chinese",
+        "hamburger"
+    ],
+    "technology": [
+        "phone",
+        "tv",
+        "tablet"
+    ]
+}
