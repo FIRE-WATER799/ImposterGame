@@ -1,5 +1,5 @@
 {
-    "food": [
+    "Food": [
         "apple",
         "banana",
         "orange",
@@ -8,9 +8,31 @@
         "chinese",
         "hamburger"
     ],
-    "technology": [
+    "Technology": [
         "phone",
         "tv",
         "tablet"
+    ],
+    "Video Games": [
+        "minecraft",
+        "fortnite",
+        "roblox",
+        "zelda",
+        "mario",
+        "sonic",
+        "pokemon",
+        "call of duty",
+        "overwatch",
+        "REPO",
+        "halo",
+        "tetris"
+    ],
+    "Animals": [
+        "dog",
+        "cat",
+        "elephant",
+        "giraffe",
+        "lion",
+        "tiger"
     ]
 }
