@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imposter Game</title>
+    <title>Imposter - Deception Party Game</title>
     <style>
         * {
             margin: 0;
@@ -12,81 +12,135 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 20px;
         }
 
         .container {
             text-align: center;
             background: white;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
         }
 
         h1 {
             color: #333;
-            margin-bottom: 10px;
-            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-size: 3.5em;
+            font-weight: 800;
         }
 
         .subtitle {
             color: #666;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .option {
+            color: #333;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .option:first-of-type {
+            margin-top: 0;
         }
 
         .button-group {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        a {
+            text-decoration: none;
         }
 
         button {
-            padding: 15px 40px;
-            font-size: 1.1em;
+            padding: 16px 32px;
+            font-size: 1em;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
-            font-weight: bold;
-            transition: transform 0.2s, box-shadow 0.2s;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            flex: 1;
+            min-width: 140px;
         }
 
         button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
         }
 
         .join-btn {
-            background-color: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
         }
 
         .create-btn {
-            background-color: #764ba2;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             color: white;
         }
 
-        .join-btn:hover {
-            background-color: #5568d3;
+        .divider {
+            height: 1px;
+            background: #ddd;
+            margin: 40px 0;
         }
 
-        .create-btn:hover {
-            background-color: #653a8a;
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .option {
+                font-size: 1.1em;
+            }
+
+            button {
+                padding: 14px 24px;
+                font-size: 0.95em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🎭 Imposter Game</h1>
-        <p class="subtitle">Find the imposter among your friends!</p>
+        <h1>🎭 Imposter</h1>
+        <p class="subtitle">The ultimate deception party game</p>
+        
+        <div class="option">Online Game</div>
         <div class="button-group">
             <a href="/join"><button class="join-btn">Join Game</button></a>
             <a href="/create"><button class="create-btn">Create Game</button></a>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="option">Local Game</div>
+        <div class="button-group">
+            <a href="/create_local"><button class="create-btn">Play Game</button></a>
         </div>
     </div>
 </body>
